@@ -6,6 +6,7 @@ import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.servlet.ModelAndView;
 
 @RestController
 public class TestController {
@@ -27,6 +28,22 @@ public class TestController {
 		return ResponseEntity.ok(res);
 		
 	}
+	
+	@GetMapping("/")
+	public ModelAndView getHome() {
+		ModelAndView mv=new ModelAndView("index");
+		return mv;
+		
+	}
+	
+	@GetMapping("/getHomePage")
+	public ModelAndView getHomepage() {
+		ModelAndView mv=new ModelAndView("home");
+		return mv;
+		
+	}
+	
+	
 	
 	
 	

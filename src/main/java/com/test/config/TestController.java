@@ -23,7 +23,7 @@ public class TestController {
 	public ResponseEntity<Response>PostData(RequestEntity<Request>reqBody){
 		Response res=new Response();
 		res.setCode("100");
-		res.setMsg("Hi Spring WithOut Xml .Posted Data:"+reqBody.getBody().getName());
+		res.setMsg("Hi Spring WithOut Xml.Posted Data:"+reqBody.getBody().getName());
 		return ResponseEntity.ok(res);
 		
 	}
